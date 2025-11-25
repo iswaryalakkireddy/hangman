@@ -1,12 +1,10 @@
-# hangman
+# **Hangman Game in C**
 
-Hangman Game in C
-
-Abstract
+## **Abstract**
 
 This project is a C-based Hangman game that allows the user to guess a hidden word one letter at a time. The program uses character arrays, loops, and conditional logic to check guesses, track progress, and determine whether the player wins or loses.
 
-Features
+## **Features**
 
 Word Progress Display
 Shows the word using underscores _ for unguessed letters.
