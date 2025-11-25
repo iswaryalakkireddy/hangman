@@ -1,108 +1,80 @@
 # hangman
-🎮 Hangman Game in C
+Hangman Game in C
 Abstract
 
-This project is a simple C-based Hangman Game that allows the user to guess a hidden word one letter at a time.
-The program uses arrays, loops, and basic character comparison to simulate the classic Hangman game.
-The user must guess all letters correctly before the allowed attempts run out.
+This project is a C-based Hangman game that allows the user to guess a hidden word one letter at a time. The program uses character arrays, loops, and conditional logic to check guesses, track progress, and determine whether the player wins or loses.
 
 Features
-1. Display Word Progress
 
-Shows the word as a series of underscores (_) representing unguessed letters.
+Word Progress Display
+Shows the word using underscores _ for unguessed letters.
 
-Updates automatically whenever the user guesses a correct letter.
+Letter Input
+User enters a letter, and the program checks if it exists in the hidden word.
 
-2. Letter Guessing
+Correct Guess Handling
+Reveals all positions of the correctly guessed letter.
 
-Prompts the user to input a single character.
+Wrong Guess Handling
+Reduces the number of remaining tries.
 
-Checks whether the letter exists in the target word.
+Win Condition
+If the user guesses all letters, the program displays a success message.
 
-3. Wrong Guess Tracking
-
-Decreases the number of attempts (tries) every time the user guesses incorrectly.
-
-Displays the remaining number of tries.
-
-4. Win Condition
-
-If all letters in the word are guessed, the player wins.
-
-Displays:
-"Congratulations! You guessed the word."
-
-5. Loss Condition
-
-If tries reach zero, the player loses.
-
-Shows the hidden word for learning purposes.
-
-6. Simple & Clean CLI Interface
-
-Fully menu-less interactive loop.
-
-Perfect for beginners learning C programming.
+Loss Condition
+If tries become zero, the program reveals the word and ends the game.
 
 How It Works
 
-The game uses a fixed word:
+The word to guess is stored in the array:
 
 char word[] = "hangman";
 
 
-A second array stores the user's current progress:
-
-char guess[20];
-
+The guess[] array stores the current progress of the user.
 
 The program:
 
-Initializes all positions with _
+Initializes all entries in guess[] to _
 
-Reads letter input using scanf()
+Reads each user input using scanf()
 
-Checks each character in the word using a loop
+Compares it with each character in the word
 
-Replaces _ with the correct letter when matched
+Updates correct guesses
 
-Tracks the number of correct letters
+Tracks the number of tries left
 
-Reduces tries on mistakes
+The game continues until:
 
-The main loop continues until:
+All characters are guessed, or
 
-All letters are guessed OR
-
-Tries reach zero
+The user runs out of tries
 
 Running the Program
 1. Compile the code
-
-Using GCC:
-
 gcc hangman.c -o hangman
 
-2. Run the executable
+2. Run the program
 ./hangman
 
-Output Previews
-🏁 Initial Screen
+Output Examples
+Initial Output
 === HANGMAN GAME ===
 Word: _ _ _ _ _ _ _
 Tries left: 6
 Enter a letter:
 
-✔ Correct Guess
+After Correct Guess
 Word: _ a _ _ _ a _
 Tries left: 6
 
-❌ Wrong Guess
+After Wrong Guess
 Wrong guess!
 Tries left: 5
 
-🎉 Win Message
+When Player Wins
 Congratulations! You guessed the word: hangman
 
-💀 Game Over
+When Player Loses
 Game Over! The word was: hangman
