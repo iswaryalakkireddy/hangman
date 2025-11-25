@@ -60,21 +60,21 @@ gcc hangman.c -o hangman
 
 Output Examples
 Initial Output
-=== HANGMAN GAME ===
-Word: _ _ _ _ _ _ _
-Tries left: 6
-Enter a letter:
+
+<img width="228" height="146" alt="image" src="https://github.com/user-attachments/assets/35b81e77-03cf-4f27-b5c4-5f1d382f3869" />
 
 After Correct Guess
-Word: _ a _ _ _ a _
-Tries left: 6
+
+<img width="206" height="125" alt="image" src="https://github.com/user-attachments/assets/ef6665cd-0984-4003-8806-ab1ce2178cb0" />
 
 After Wrong Guess
-Wrong guess!
-Tries left: 5
+
+<img width="242" height="152" alt="image" src="https://github.com/user-attachments/assets/07b37ada-c7f7-4f2a-8f89-4bbd66c09190" />
 
 When Player Wins
-Congratulations! You guessed the word: hangman
+
+<img width="457" height="137" alt="image" src="https://github.com/user-attachments/assets/c8bbdfce-ac94-4b9e-a8d8-921ee97d8309" />
 
 When Player Loses
-Game Over! The word was: hangman
+
+<img width="355" height="66" alt="image" src="https://github.com/user-attachments/assets/dae83fa0-5f1a-4d2e-b547-1c87e2e70955" />
